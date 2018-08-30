@@ -90,21 +90,23 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
     - Between `@` and `/` will be the host
     - Between `/` and `?` will be the database name
 
+#### Click Edit
+
 ![](heroku_config_vars2.png)
 
-### Database Username
+#### Database Username
 
 ![](heroku_db_username.png)
 
-### Database Password
+#### Database Password
 
 ![](heroku_db_password.png)
 
-### Database Host
+#### Database Host
 
 ![](heroku_db_host.png)
 
-### Database Name
+#### Database Name
 
 ![](heroku_db_name.png)
 
