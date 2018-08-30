@@ -16,3 +16,9 @@
     * Click on large purple button **Download the Heroku CLI for...**
     * Select operating system from drop down
       ![](heroku_dev_center3.png)
+
+4. In the Terminal enter project directory
+5. Delete `.git` directory
+    - `rm -rf .git`
+6. Type `heroku login` \* Enter credentials
+   ![](terminal_heroku_login)
