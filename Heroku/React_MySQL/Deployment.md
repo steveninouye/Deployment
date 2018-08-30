@@ -21,4 +21,4 @@
 5. Delete `.git` directory
     - `rm -rf .git`
 6. Type `heroku login` \* Enter credentials
-   ![](terminal_heroku_login)
+   ![](terminal_heroku_login.png)
