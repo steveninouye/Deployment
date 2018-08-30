@@ -7,6 +7,11 @@
         - Proceed with E-mail verification
 2. Log In to [heroku.com](https://www.heroku.com/)
 3. Download `heroku cli` at [Heroku Dev Center](https://devcenter.heroku.com/start)
+
     - Select Node JS
       ![](heroku_dev_center.png)
     - Click on large purple button **I'm ready to start**
+      ![](heroku_dev_center2.png)
+
+    * Click on large purple button **Download the Heroku CLI for...**
+      ![](heroku_dev_center3.png)
