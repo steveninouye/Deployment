@@ -14,4 +14,5 @@
       ![](heroku_dev_center2.png)
 
     * Click on large purple button **Download the Heroku CLI for...**
+    * Select operating system from drop down
       ![](heroku_dev_center3.png)
