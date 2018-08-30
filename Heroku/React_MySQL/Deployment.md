@@ -43,10 +43,18 @@
     -   This will push to Heroku and send an environment variable `NODE_ENV = 'production'`
         -   Typing `heroku open` in the terminal after completion will open the app for your to view (it will already be deployed {no database or environment variables})
 
-## Setting Up Heroku
+## Setting Up Heroku for Extra Features/Bonuses (Free)
 
-This will allow database to be used, give more hours for deployment, as well as other things
+This will give you 450 hours of dyno usage (time site is deployed), allow you to use Heroku elements (plugins [e.g. clearDB to upload database]), as well as other things
 
 1. Log In to [Heroku](https://id.heroku.com/login)
 2. Go to Account Settings
+
    ![](heroku_dashboard.png)
+
+3. Go to Billing
+
+![](heroku_account.png)
+
+4. Add Credit Card (it will not charge you anything unless you activate paid tiers)
+
