@@ -108,6 +108,10 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
 
 ![](heroku_db_name.png)
 
+10. At this time you can add your environment variables into the inputs
+
+![](heroku_config_vars3.png)
+
 ### Inside Your MySQL Workbench
 
 This is to connect to the Heroku MySQL Database remotely
@@ -126,24 +130,47 @@ This is to connect to the Heroku MySQL Database remotely
 
 3. Go into localhost application (we are getting local database tables & values)
 4. Click on Server >> Data Export
-   ![](mySql_workbench_data_export.png)
+
+    ![](mySql_workbench_data_export.png)
+
 5. Under **Tables to Export** select databases to export
 6. Select all tables to export
 7. Make sure **Dump Structure and Data** is selected
-   ![](mySql_workbench_data_export2.png)
+
+    ![](mySql_workbench_data_export2.png)
+
 8. Make sure **Objects to Export >> Dump Stored Procedures and Functions** is not checked \*_it will cause errors if checked_
-   ![](mySql_workbench_obj_to_export.png)
+
+    ![](mySql_workbench_obj_to_export.png)
+
 9. Select directory and name the file under **Export Options >> Export to Self-Contained File**
-   ![](mySql_workbench_export_options.png)
+
+    ![](mySql_workbench_export_options.png)
+
 10. Click **Start Export**
     - You will get a _mysqldump Version Mismatch_ warning but click "Continue Anyway"
     - You will now have a sql file which can be imported to the Heroku MySql database
 11. Go out of your database and log into the Heroku Database (saving password to keychain)
 12. Go to **Server >> Data Import**
+
     ![](mySql_workbench_data_import.png)
+
 13. Select Import from **Self-Contained File**
 14. Find and Select your file to be imported
+
     ![](mySql_workbench_data_import2.png)
+
 15. Under **Default Target Schema** Select your Heroku database name
+
     ![](mySql_workbench_target_schema.png)
+
 16. Click **Start Import**
+17. Exit tab and refresh database
+    - Database tables and values should be inserted
+
+### NOTE:
+Anytime you want to make a change to your deployed app you
+
+1. `git add .`
+2. `git commit 'commit message'`
+3. `git push heroku master`
