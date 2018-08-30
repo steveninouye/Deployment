@@ -107,3 +107,43 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
 ### Database Name
 
 ![](heroku_db_name.png)
+
+### Inside Your MySQL Workbench
+
+This is to connect to the Heroku MySQL Database remotely
+
+1. Add a New Connection
+
+![](mySql_workbench_new_db.png)
+
+2. Enter in inputs (NO PASSWORD)
+    - **Hostname** === Heroku database host
+    - **Username** === Heroku database username
+    - **Password** !!SKIP!!
+    - **Default Schema** === Heroku database name
+
+![](mySql_workbench_connection.png)
+
+3. Go into localhost application (we are getting local database tables & values)
+4. Click on Server >> Data Export
+   ![](mySql_workbench_data_export.png)
+5. Under **Tables to Export** select databases to export
+6. Select all tables to export
+7. Make sure **Dump Structure and Data** is selected
+   ![](mySql_workbench_data_export2.png)
+8. Make sure **Objects to Export >> Dump Stored Procedures and Functions** is not checked \*_it will cause errors if checked_
+   ![](mySql_workbench_obj_to_export.png)
+9. Select directory and name the file under **Export Options >> Export to Self-Contained File**
+   ![](mySql_workbench_export_options.png)
+10. Click **Start Export**
+    - You will get a _mysqldump Version Mismatch_ warning but click "Continue Anyway"
+    - You will now have a sql file which can be imported to the Heroku MySql database
+11. Go out of your database and log into the Heroku Database (saving password to keychain)
+12. Go to **Server >> Data Import**
+    ![](mySql_workbench_data_import.png)
+13. Select Import from **Self-Contained File**
+14. Find and Select your file to be imported
+    ![](mySql_workbench_data_import2.png)
+15. Under **Default Target Schema** Select your Heroku database name
+    ![](mySql_workbench_target_schema.png)
+16. Click **Start Import**
