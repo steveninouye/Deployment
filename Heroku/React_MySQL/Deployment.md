@@ -1,4 +1,5 @@
 # React MySQL Deployment on Heroku
+
 Walkthrough to launch a Full-Stack Javascript Application on Heroku
 
 ## Launching App (no environment variables / Database... yet)
@@ -10,17 +11,14 @@ Walkthrough to launch a Full-Stack Javascript Application on Heroku
         - Proceed with E-mail verification
 2. Log In to [heroku.com](https://www.heroku.com/)
 3. Download `heroku cli` at [Heroku Dev Center](https://devcenter.heroku.com/start)
-
     - Select Node JS
+    - Click on large purple button **I'm ready to start**
+        - Click on large purple button **Download the Heroku CLI for...**
+    * Select operating system from drop down
 
 ![](heroku_dev_center.png)
 
-    - Click on large purple button **I'm ready to start**
-
 ![](heroku_dev_center2.png)
-
-    * Click on large purple button **Download the Heroku CLI for...**
-    * Select operating system from drop down
 
 ![](heroku_dev_center3.png)
 
@@ -44,7 +42,7 @@ Walkthrough to launch a Full-Stack Javascript Application on Heroku
 
 11. In terminal type `git push heroku master`
     -   This will push to Heroku and send an environment variable `NODE_ENV = 'production'`
-        -   Typing `heroku open` in the terminal after completion will open the app for your to view (it will already be deployed {no database or environment variables})
+    -   Typing `heroku open` in the terminal after completion will open the app for your to view (it will already be deployed {no database or environment variables})
 
 ## Setting Up Heroku for Extra Features/Bonuses (Free)
 
@@ -53,7 +51,7 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
 1. Log In to [Heroku](https://id.heroku.com/login)
 2. Go to Account Settings
 
-   ![](heroku_dashboard.png)
+    ![](heroku_dashboard.png)
 
 3. Go to Billing
 
@@ -62,13 +60,14 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
 4. Add Credit Card (it will not charge you anything unless you activate paid tiers)
 
 ## Setting Up Environment Variables and Database
+
 1. Go to your Applications portion of Heroku [https://dashboard.heroku.com/apps](https://dashboard.heroku.com/apps)
 2. Click on your application
-3. Click on `Configure Add ons`
+3. Click on **Configure Add ons**
+    - You should see your script to run production inside (what was in your `Procfile`) \*picture below in step 4
 
 ![](heroku_addons.png)
 
-    * You should see your script to run production inside (what was in your Procfile) *picture below in step 4
 4. Search Add Ons for `cleardb`
 
 ![](heroku_addons2.png)
@@ -78,17 +77,33 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
 ![](heroku_cleardb.png)
 
 6. Click **Provision** button
-    * You will see ClearDB MySQL now added to your app
+    - You will see ClearDB MySQL now added to your app
 7. Click on **Settings** tab
 8. Click on **Reveal Config Vars** button
 
 ![](heroku_config_vars.png)
 
 9. Click on the Pencil icon to Edit
+    - You will see a long string in the Value input box
+    - Between `mysql://` and next colon `:` will be your database username
+    - Between `:` and `@` will be the password
+    - Between `@` and `/` will be the host
+    - Between `/` and `?` will be the database name
 
 ![](heroku_config_vars2.png)
 
-    * You will see a long string in the Value input box
-    * Between `mysql://` and next colon `:` will be your database username
+### Database Username
 
 ![](heroku_db_username.png)
+
+### Database Password
+
+![](heroku_db_password.png)
+
+### Database Host
+
+![](heroku_db_host.png)
+
+### Database Name
+
+![](heroku_db_name.png)
