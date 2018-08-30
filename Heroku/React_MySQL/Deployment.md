@@ -1,4 +1,7 @@
 # React MySQL Deployment on Heroku
+Walkthrough to launch a Full-Stack Javascript Application on Heroku
+
+## Launching App (no environment variables / Database... yet)
 
 1. Go to [heroku.com](https://www.heroku.com/)
     - Sign Up
@@ -58,3 +61,34 @@ This will give you 450 hours of dyno usage (time site is deployed), allow you to
 
 4. Add Credit Card (it will not charge you anything unless you activate paid tiers)
 
+## Setting Up Environment Variables and Database
+1. Go to your Applications portion of Heroku [https://dashboard.heroku.com/apps](https://dashboard.heroku.com/apps)
+2. Click on your application
+3. Click on `Configure Add ons`
+
+![](heroku_addons.png)
+
+    * You should see your script to run production inside (what was in your Procfile) *picture below in step 4
+4. Search Add Ons for `cleardb`
+
+![](heroku_addons2.png)
+
+5. Select **Ignite -- Free** (should already be selected)
+
+![](heroku_cleardb.png)
+
+6. Click **Provision** button
+    * You will see ClearDB MySQL now added to your app
+7. Click on **Settings** tab
+8. Click on **Reveal Config Vars** button
+
+![](heroku_config_vars.png)
+
+9. Click on the Pencil icon to Edit
+
+![](heroku_config_vars2.png)
+
+    * You will see a long string in the Value input box
+    * Between `mysql://` and next colon `:` will be your database username
+
+![](heroku_db_username.png)
